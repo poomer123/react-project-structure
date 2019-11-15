@@ -4,11 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Switch } from "react-router-dom";
 
 ReactDOM.render(
     <BrowserRouter>
-        <App />
+        <Switch>
+            <App />
+        </Switch>
     </BrowserRouter>,
     document.getElementById("root")
 );
