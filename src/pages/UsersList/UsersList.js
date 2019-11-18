@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import MainLayout from "../../layouts/Main";
+import Loading from "../../components/Loading";
 import { mainService } from "../../services";
 
 function UsersList(props) {
@@ -25,7 +26,7 @@ function UsersList(props) {
                 <div className="col">
                     <h1>Users List</h1>
                     {isLoading
-                        ? <h3>Loading..</h3>
+                        ? <Loading />
                         : <>
                             {usersData.length > 0
                                 ? <ul>
